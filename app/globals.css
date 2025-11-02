@@ -1,0 +1,114 @@
+/* 🖤 Base Setup */
+html, body {
+  margin: 0;
+    padding: 0;
+      height: 100%;
+        width: 100%;
+          background: radial-gradient(circle at center, #050505 0%, #000 100%);
+            color: #d0d8ff;
+              font-family: 'Inter', sans-serif;
+                display: flex;
+                  justify-content: center;
+                    align-items: center;
+                      text-align: center;
+                        overflow: hidden;
+                          position: relative;
+                          }
+
+                          main {
+                            display: flex;
+                              flex-direction: column;
+                                justify-content: center;
+                                  align-items: center;
+                                    text-align: center;
+                                      width: 100%;
+                                        max-width: 1200px;
+                                          padding: 0 1rem;
+                                            position: relative;
+                                            }
+
+                                            /* 🔥 Title & text animations */
+                                            h1 {
+                                              font-size: clamp(2rem, 5vw, 4.5rem);
+                                                font-weight: 900;
+                                                  color: #3b82f6;
+                                                    text-shadow:
+                                                        0 0 8px rgba(59, 130, 246, 0.6),
+                                                            0 0 12px rgba(59, 130, 246, 0.5),
+                                                                0 0 20px rgba(59, 130, 246, 0.3);
+                                                                  -webkit-text-stroke: 1px rgba(59, 130, 246, 0.2);
+                                                                    animation: glowTitle 3s infinite alternate, floatText 6s ease-in-out infinite;
+                                                                    }
+
+                                                                    @keyframes floatText {
+                                                                      0%, 100% { transform: translateY(0px); }
+                                                                        50% { transform: translateY(-8px); }
+                                                                        }
+
+                                                                        p {
+                                                                          font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+                                                                            font-weight: 800;
+                                                                              color: #a5b4fc;
+                                                                                max-width: 600px;
+                                                                                  margin: 1rem auto;
+                                                                                    line-height: 1.6;
+                                                                                      text-shadow: 0 0 3px rgba(165, 180, 252, 0.5);
+                                                                                        animation: textGlow 4s ease-in-out infinite;
+                                                                                        }
+
+                                                                                        @keyframes textGlow {
+                                                                                          0%, 100% { text-shadow: 0 0 3px rgba(165, 180, 252, 0.5); }
+                                                                                            50% { text-shadow: 0 0 12px rgba(165, 180, 252, 0.8); }
+                                                                                            }
+
+                                                                                            button {
+                                                                                              font-size: clamp(0.95rem, 2vw, 1.1rem);
+                                                                                                font-weight: 800;
+                                                                                                  background: linear-gradient(90deg, #22c55e, #16a34a);
+                                                                                                    color: #fff;
+                                                                                                      border: none;
+                                                                                                        border-radius: 12px;
+                                                                                                          padding: 12px 24px;
+                                                                                                            margin-top: 1rem;
+                                                                                                              box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+                                                                                                                transition: all 0.3s ease;
+                                                                                                                  animation: pulse 2s infinite;
+                                                                                                                    text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+                                                                                                                      position: relative;
+                                                                                                                        overflow: hidden;
+                                                                                                                        }
+
+                                                                                                                        button::after {
+                                                                                                                          content: "";
+                                                                                                                            position: absolute;
+                                                                                                                              top: 0; left: -75%;
+                                                                                                                                width: 50%; height: 100%;
+                                                                                                                                  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0.0), rgba(255,255,255,0.3));
+                                                                                                                                    transform: skewX(-25deg);
+                                                                                                                                      transition: all 0.3s ease;
+                                                                                                                                      }
+
+                                                                                                                                      button:hover::after {
+                                                                                                                                        animation: shine 1s ease-in-out;
+                                                                                                                                        }
+
+                                                                                                                                        @keyframes shine {
+                                                                                                                                          0% { left: -75%; }
+                                                                                                                                            50% { left: 100%; }
+                                                                                                                                              100% { left: -75%; }
+                                                                                                                                              }
+
+                                                                                                                                              footer {
+                                                                                                                                                font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+                                                                                                                                                  font-weight: 800;
+                                                                                                                                                    margin-top: 2rem;
+                                                                                                                                                      opacity: 0.85;
+                                                                                                                                                        color: #9ca3af;
+                                                                                                                                                          text-shadow: 0 0 2px rgba(156, 163, 175, 0.5);
+                                                                                                                                                            animation: floatFooter 6s ease-in-out infinite;
+                                                                                                                                                            }
+
+                                                                                                                                                            @keyframes floatFooter {
+                                                                                                                                                              0%, 100% { transform: translateY(0px); }
+                                                                                                                                                                50% { transform: translateY(-4px); }
+                                                                                                                                                                }

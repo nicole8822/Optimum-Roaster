@@ -1,0 +1,13 @@
+
+# Environment files
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# Environment files
+node_modules/
+.env
+.env.local
+.env.*
+node_modules
